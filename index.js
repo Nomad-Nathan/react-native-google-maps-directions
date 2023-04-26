@@ -22,7 +22,7 @@ const getWaypoints = (waypoints = []) => {
     .map(value => `${value.latitude},${value.longitude}`)
     .join('|')
 
-  return `&waypoints=${params}`
+  return `&avoid=tolls|highways&waypoints=${params}`
 }
 
 function getDirections ({ destination, source, params = [], waypoints = [] } = {}) {
